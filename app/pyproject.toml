@@ -1,0 +1,33 @@
+[tool.poetry]
+name = "ai-test"
+version = "1.0"
+description = "An application for demonstrating your skills in AI" # Cleaned quotes
+authors = ["Rockstar"] 
+
+[tool.poetry.dependencies]
+python = "^3.8" # 
+openfabric-pysdk = "^0.3.0" 
+
+# Dependencies for core logic and memory
+requests = "^2.25.1" # For core.stub.Stub
+numpy = "~1.24.4" 
+sentence-transformers = "~2.7.0" 
+faiss-cpu = "~1.7.4"            
+dateparser = "~1.2.0"            
+
+# Dependencies for Gradio UI & STT
+gradio = "~4.29.0" 
+Pillow = "^10.0.0"
+faster-whisper = "~1.0.1" 
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2" 
+
+[[tool.poetry.source]]
+name = "node2"
+url = "https://repo.node2.openfabric.network/index"
+priority = "supplemental" 
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
