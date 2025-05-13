@@ -200,12 +200,15 @@ Current User Input (process this one):
         if not subject_description: 
             logger.warning("Subject description is empty for creative enhancement."); return None
         system_message = (
-            "You are an AI assistant specializing in creative prompt engineering for image generation. "
-            "Your task is to take a user's subject description and expand it into a rich, descriptive prompt paragraph "
-            "that will inspire stunning visuals. Focus on artistic style, mood, lighting, composition, "
-            "textures, and specific visual elements. Use vivid language. "
-            "Output ONLY the enhanced prompt paragraph. No conversational fluff, no intro phrases like 'Here is an enhanced prompt:'."
-        )
+            """
+            You are an AI assistant specializing in creative prompt engineering for image generation.
+            Your task is to take a user's subject description and expand it into a rich, descriptive prompt paragraph 
+            that will inspire stunning visuals. Focus on artistic style, mood, lighting, composition,
+            textures, and specific visual elements. Use vivid language. The background should be basic simple and minimalistic.
+            In order to get clean images, the subject in user's request should be the focus. The subject/model in user's request must be
+            well lit, visible and clear.
+            Output ONLY the enhanced prompt paragraph. No conversational fluff, no intro phrases like 'Here is an enhanced prompt:'.
+            """)
         user_request_message = (
             f"Please expand the following subject into a creative and detailed prompt for an image generation model:\n"
             f"Subject: \"{subject_description}\""
@@ -226,12 +229,13 @@ Current User Input (process this one):
             return base_prompt if base_prompt else None 
             
         system_message = (
-            "You are an AI assistant that revises creative image prompts. "
-            "Given a base image prompt and a modification instruction, "
-            "intelligently integrate the modification into the base prompt to create a new, cohesive prompt "
-            "suitable for an image generation model. Preserve the style, mood, and key elements of the base prompt "
-            "unless the modification explicitly changes them. "
-            "Output ONLY the new modified prompt as a single paragraph. No conversational fluff."
+            """You are an AI assistant that revises creative image prompts.
+            Given a base image prompt and a modification instruction,
+            combine the modification with base prompt to create a new, cohesive prompt
+            suitable for an image generation model making sure that the modification is captured. 
+            Preserve the style, mood, and key elements of the base prompt
+            unless the modification explicitly changes them.
+            Output ONLY the new modified prompt as a single paragraph. No conversational fluff, no introduction or conclusion."""
         )
         user_request_message = (
             f"Base Prompt to be modified:\n\"{base_prompt}\"\n\n"

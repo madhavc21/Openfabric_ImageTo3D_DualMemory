@@ -50,6 +50,12 @@ This application serves as a demonstration of building a complex AI pipeline. A 
 
 The primary interface for this application (as per core requirements) is an API endpoint exposed when run as an Openfabric application. A Gradio-based chat UI is also provided as a user-friendly way to interact with the pipeline and showcase its conversational memory features.
 
+<video controls width="640">
+  <source src="Gradio-demo.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+
 ## Features Detailed
 
 ### LLM-Powered Understanding
