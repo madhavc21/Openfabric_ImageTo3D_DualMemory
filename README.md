@@ -50,7 +50,7 @@ This application serves as a demonstration of building a complex AI pipeline. A 
 
 The primary interface for this application (as per core requirements) is an API endpoint exposed when run as an Openfabric application. A Gradio-based chat UI is also provided as a user-friendly way to interact with the pipeline and showcase its conversational memory features.
 
-https://github.com/madhavc21/Openfabric_ImageTo3D_DualMemory/blob/main/Gradio-demo.mp4
+[Demo](https://github.com/madhavc21/Openfabric_ImageTo3D_DualMemory/blob/main/Gradio-demo.mp4)
 
 ## Features Detailed
 
